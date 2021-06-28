@@ -1,3 +1,5 @@
+
+
 let potsHashTable = {
     "uncommon": [  
         [ [2,"lesser arcane"], [2, "lesser affinity"] ],
@@ -11,3 +13,5 @@ let potsHashTable = {
     "epic": [          ],
     "lego": [          ],
 }
+
+export default potsHashTable
