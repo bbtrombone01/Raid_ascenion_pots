@@ -1,19 +1,44 @@
 import React from "react"
 import SingleLineForm from "./Form"
 import {connect} from "react-redux"
-// import {incrementCount} from "../Store/actions/hompageActions"
 
 class HomePage extends React.Component{
 
-    increaseCount=()=>{
-       this.props.increment()
-
-        // debugger
+    
+    // every time you this.props is updated the length of the array increases 
+    componentDidUpdate(){
+        let dumbArrayForIteration = []
+        
+        for(let i=0; i<this.props.count; i++){
+            dumbArrayForIteration.push(i)
+        }
+        return dumbArrayForIteration
     }
 
+    
+
+    // 
+    increaseCount=()=>{
+    
+
+    let newCountindex = this.props.count.length +1
+
+    this.props.increment(newCountindex)
+    }
+
+    
+
         render(){
+            // arry of numbers need for homePageForm
+            
+            let homePageArray = this.componentDidUpdate()
+
+            // maps through the array, generates a SinfleLineForm for each index.
+            
+            const homePageForm = homePageArray.map(element =><SingleLineForm />)
+
             return <div>
-                <SingleLineForm/>
+                {homePageForm}
                 <button onClick={this.increaseCount}> press me to increase count </button>
             </div>
         }
@@ -28,7 +53,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps =(dispatch) =>{
     return {
-        increment: () => dispatch({type: "INCERMENTCOUNT"})
+        increment: (value) => dispatch({type: "INCERMENTCOUNT", payload: value})
     }
 }
 

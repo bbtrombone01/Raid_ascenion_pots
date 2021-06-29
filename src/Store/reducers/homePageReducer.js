@@ -8,8 +8,9 @@ const homePageReducer =(state = initialState, action)=>{
 
 
         case "INCERMENTCOUNT":
+            // debugger
             return {
-             count: state.count + 1
+                count: state.count +1
             }
     
 
