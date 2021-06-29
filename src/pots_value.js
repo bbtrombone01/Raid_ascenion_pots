@@ -1,13 +1,14 @@
 
+// may attempt poiton class solution later 
 
-class Potion {
+// class Potion {
     
-constructor(interA, interB){
-    this.arcane =  interA
-    this.affinity = interB
-    }
+// constructor(interA, interB){
+//     this.arcane =  interA
+//     this.affinity = interB
+//     }
 
-}
+// }
 
 let potsHashTable = {
     "uncommon": [  
