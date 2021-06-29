@@ -1,11 +1,10 @@
 import React from "react"
-import SingleLineForm from "./componets/Form"
-import potsHashTable from "./pots_value"
+import HomePage from "./componets/HomePage"
 
 
 function App(){
 
-  return <p> hello</p>
+  return <HomePage/>
 }
 
 export default App

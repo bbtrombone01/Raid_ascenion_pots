@@ -1,8 +1,17 @@
 
 
+class Potion {
+    
+constructor(interA, interB){
+    this.arcane =  interA
+    this.affinity = interB
+    }
+
+}
+
 let potsHashTable = {
     "uncommon": [  
-        [ [2,"lesser arcane"], [2, "lesser affinity"] ],
+        [  , [2, "lesser affinity"] ],
         [ [2,"lesser arcane"], [2, "lesser affinity"] ],
         [ [3,"lesser arcane"], [2, "lesser affinity"] ],
         [ [3,"lesser arcane"], [3, "lesser affinity"] ],

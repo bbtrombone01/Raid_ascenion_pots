@@ -1,13 +1,14 @@
 const initialState = {
-    count: 0
+    count: 1
 }
 
 const homePageReducer =(state = initialState, action)=>{
 
     switch(action.type){
         case "INCERMENTCOUNT":
+            debugger
             return {
-                state
+                ...state,
             }
     
 
