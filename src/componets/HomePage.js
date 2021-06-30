@@ -39,6 +39,7 @@ class HomePage extends React.Component{
 
             return <div>
                 {homePageForm}
+                <br />
                 <button onClick={this.increaseCount}> press me to increase count </button>
             </div>
         }

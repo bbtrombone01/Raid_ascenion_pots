@@ -20,3 +20,15 @@
       border: solid;
       text-align: center;
   }
+
+  .parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+
+  .grandparent{
+      display: inline-flex
+   
+      
+  }
