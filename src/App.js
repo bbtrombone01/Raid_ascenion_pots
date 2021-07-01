@@ -3,7 +3,6 @@ import HomePage from "./componets/HomePage"
 
 
 function App(){
-
   return <HomePage/>
 }
 
