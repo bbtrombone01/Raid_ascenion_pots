@@ -5,14 +5,10 @@ import FormElement from "./FormElement";
 
 class SingleLineForm extends React.Component{
 
-        constructor(){
-
-                super();
-
-                this.state ={
-                        boolean: false
-                }
+        state ={
+            boolean: false
         }
+
 // changes bolean to true 
         changeBoolean=()=>{
                 this.setState({boolean: true})
