@@ -20,38 +20,12 @@ class SingleLineForm extends React.Component{
 
         render(){
                 return <div className="parent" >
-                       <FormElement />
-                       <FormElement />
-                       <FormElement />
-                       <FormElement />
+                       <FormElement title="rariety" showDropDownMenu= {false} />
+                       {/* <FormElement title="affinity" showDropDownMenu= {false} />
+                       <FormElement title= "starting ascension" showDropDownMenu= {false} />
+                       <FormElement title= "ending ascension" showDropDownMenu= {false} /> */}
                 </div>
 
-                
-                
-
-                // test of what a single part of the form might look like 
-                //<div>
-
-                //         <div className="card" >
-                //                 <div className="container">  
-
-
-                //                 <h4 className ="header"> rarity </h4>
-                //                 <button onClick={this.changeBoolean}> choose </button>
-
-                //                 </div>
-                //         </div>
-                //         <div>
-                //                 <p> g</p>
-                //         </div>
-
-
-
-                //         <button> affinity</button>
-                //         <button> start level</button>
-                //         <button> end level</button>
-                //         <button> submit</button>
-                // </div>
         }
 }
 

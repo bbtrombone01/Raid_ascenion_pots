@@ -15,18 +15,10 @@ class HomePage extends React.Component{
         return dumbArrayForIteration
     }
 
-    
-
-    // 
     increaseCount=()=>{
-    
-
-    let newCountindex = this.props.count.length +1
-
-    this.props.increment(newCountindex)
+        let newCountindex = this.props.count.length +1
+        this.props.increment(newCountindex)
     }
-
-    
 
         render(){
             // arry of numbers need for homePageForm
@@ -35,8 +27,7 @@ class HomePage extends React.Component{
 
             // maps through the array, generates a SinfleLineForm for each index.
             
-            const homePageForm = homePageArray.map(element =><SingleLineForm />)
-
+            const homePageForm = homePageArray.map(element =><SingleLineForm/>)
             return <div>
                 {homePageForm}
                 <br />
