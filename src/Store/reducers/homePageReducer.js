@@ -8,7 +8,6 @@ const homePageReducer =(state = initialState, action)=>{
 
 
         case "INCERMENTCOUNT":
-            // debugger
             return {
                 count: state.count.concat(state.count.length)
             }

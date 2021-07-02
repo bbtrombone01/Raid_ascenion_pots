@@ -1,55 +1,26 @@
 import React from "react"
 import  "../form.css"
 import FormElement from "./FormElement";
-
+import {connect} from "react-redux"
 
 class SingleLineForm extends React.Component{
 
-        state ={
-            boolean: false
-        }
-
-// changes bolean to true 
-        changeBoolean=()=>{
-                this.setState({boolean: true})
-        }
 
         render(){
+                let formAreas = this.props.FormInfo.map( e => <FormElement value= {e} />)
+
+
                 return <div className="parent" >
-                       <FormElement />
-                       <FormElement />
-                       <FormElement />
-                       <FormElement />
+                        {formAreas}
                 </div>
 
-                
-                
-
-                // test of what a single part of the form might look like 
-                //<div>
-
-                //         <div className="card" >
-                //                 <div className="container">  
-
-
-                //                 <h4 className ="header"> rarity </h4>
-                //                 <button onClick={this.changeBoolean}> choose </button>
-
-                //                 </div>
-                //         </div>
-                //         <div>
-                //                 <p> g</p>
-                //         </div>
-
-
-
-                //         <button> affinity</button>
-                //         <button> start level</button>
-                //         <button> end level</button>
-                //         <button> submit</button>
-                // </div>
         }
 }
 
+const mapStateToProps = (state) =>{
+        return{
+           FormInfo: state.formReducer
+        }
+    }
 
-export default SingleLineForm
+export default connect(mapStateToProps)( SingleLineForm)

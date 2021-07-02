@@ -8,8 +8,8 @@ class HomePage extends React.Component{
         this.props.increment()
     }
         render(){
-
-            let mapOverCountIndexs = this.props.count.map( e => <SingleLineForm key={e} />)
+            //maps over each index in count, returns a singleLineForm for each index. 
+            let mapOverCountIndexs = this.props.count.map( e => <SingleLineForm key={ String(e)+"Form"} />)
 
             return <div>
                 {mapOverCountIndexs}
