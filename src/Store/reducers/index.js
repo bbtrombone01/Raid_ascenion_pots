@@ -1,9 +1,8 @@
 import { combineReducers } from "redux";
-import  homePageReducer  from "./homePageReducer"
-import potionCounteReducer from "./potionCountReducer";
-import formReducer from "./FormReducer";
+import desiredResouceReducer  from "./desiredResouceReducer"
+import potionCountReducer from "./potionCountReducer";
 
-const rootReducer = combineReducers({homePageReducer, potionCounteReducer,formReducer})
+const rootReducer = combineReducers({desiredResouceReducer, potionCountReducer})
 
 
 export default rootReducer

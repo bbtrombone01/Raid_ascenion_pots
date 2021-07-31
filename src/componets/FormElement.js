@@ -1,41 +1,26 @@
 import React from "react"
-import "../form.css"
-import DropDownLine from "./FormDropDown"
+import  "../form.css"
+import FormElementParmeters from "./FormElementParmeters"
 
 class FormElement extends React.Component{
 
 
+        // change css names at some point 
 
-    state = {
-        shoewDropDownMenu: false,
-        button: "choose", 
-        
-    }
 
-    changeState =()=>{
-        this.setState({shoewDropDownMenu: true})
-    }
+        render(){
+              // generates an array from the keys in formObject  
+              let  arrayOfKeys = Object.keys(this.props.formObject)
 
-    render(){
-        // debugger
-       let buttonValue = this.state.button
-       let shoewDropDownMenu = this.state.shoewDropDownMenu
-       let test  = Object.keys(this.props.value)
-       let dropDownMenu = this.props.value[test].map( e=> <DropDownLine name={test}  value={e} click={this.fillInValue} test2={this.props.test1}/>)
-     
+              // removes the string "id" from the array 
+              arrayOfKeys.pop()
 
-        return <div className={Object.keys(this.props.value)[0]}>
-                        <div className="container">
-                            <h5 className="header"> {test}</h5>
-                            <button onClick={this.changeState}> {buttonValue}</button>
-                            {/* {dropDownMenu} */}
-                            {shoewDropDownMenu? dropDownMenu: null}
-                        </div>
-            </div>
-
-    }
+              let  formElements = arrayOfKeys.map( e => <FormElementParmeters formSection = {e} dropDownClassname={e+","+this.props.formObject.id} key= {e+this.props.formObject.id} objectId={this.props.formObject.id} />)
+               
+               return <div className="grandparent" >
+                       {formElements} 
+                </div>
+        }
 }
-
-
 
 export default FormElement

@@ -1,22 +1,36 @@
 const initialState = {
-    "Arcane lesser potion": 0,
-    "Arcane medium potion": 0,
-    "Arcane greater potion": 0,
-    "Force lesser potion": 0,
-    "Force medium potion": 0,
-    "Force greater potion": 0,
-    "Magic lesser potion": 0,
-    "Magic medium poiton": 0,
-    "Magic greater potion": 0,
-    "Spirit lesser potion": 0,
-    "Spirit medium potion": 0,
-    "Spirit greater potion": 0,
+    "Lesser Arcane": 0,
+    "Greater Arcane": 0,
+    "Superior Arcane": 0,
+    "Lesser Magic": 0,
+    "Superior Magic": 0,
+    "Greater Magic": 0,
+    "Lesser Void": 0,
+    "Superior Void": 0,
+    "Greater Void": 0,
+    "Lesser Force": 0,
+    "Superior Force": 0,
+    "Greater Force": 0,
+    "Lesser Spirit": 0,
+    "Superior Spirit": 0,
+    "Greater Spirit": 0,
 }
 
-const potionCounteReducer =( state = initialState, action)=>{
+const potionCountReducer =( state = initialState, action)=>{
     switch(action.type){
-        case "INCREMENTPOTION": {
-            return state
+
+        case "INCREMENTPOTION":
+            return {
+                ...state,
+               [action.key1]: state[action.key1] + action.value1,
+               [action.key2]: state[action.key2] + action.value2,   
+            }
+
+        case "BlankSTATE": {
+           
+            return {
+            ...initialState
+            }
         }
 
         default: 
@@ -26,4 +40,4 @@ const potionCounteReducer =( state = initialState, action)=>{
 }
 
 
-export default potionCounteReducer
+export default potionCountReducer

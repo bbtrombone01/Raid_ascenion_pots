@@ -1,10 +1,17 @@
 import React from "react"
-import HomePage from "./componets/HomePage"
-
+import DesiredResourceForm from "./componets/DesiredResourceForm"
+import PotionReducerSorter from "./componets/PotionReducerSorter"
+import PoitonMap from "./componets/PoitonMap"
 
 function App(){
 
-  return <HomePage/>
+  return <div>
+    <DesiredResourceForm/>
+    <PotionReducerSorter />
+    <PoitonMap />
+
+  </div> 
+  
 }
 
 export default App
