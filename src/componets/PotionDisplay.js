@@ -19,7 +19,7 @@ class PotionDisplay extends React.Component{
                     }
 
                     // only wants to display the string if you have some potions
-        return < div>  {potionString ? potionString : null }    </div>
+        return < div className="test">  {potionString ? potionString : null }    </div>
     }
 }
 

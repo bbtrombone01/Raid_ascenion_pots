@@ -25,10 +25,17 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
+    margin-right: 100px;
   }
 
-  .grandparent{
-      display: inline-flex
-   
-      
-  }
+  /* .test{
+    display: flex;
+    float: right;
+    flex-direction: row;
+    color: aqua;
+    justify-content: right;
+  } */
+
+  /* .grandparent{
+      display: inline-flex   
+  } */

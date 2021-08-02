@@ -1,5 +1,4 @@
 import React from "react"
-import  "../form.css"
 import FormElementParmeters from "./FormElementParmeters"
 
 class FormElement extends React.Component{
@@ -17,7 +16,7 @@ class FormElement extends React.Component{
 
               let  formElements = arrayOfKeys.map( e => <FormElementParmeters formSection = {e} dropDownClassname={e+","+this.props.formObject.id} key= {e+this.props.formObject.id} objectId={this.props.formObject.id} />)
                
-               return <div className="grandparent" >
+               return <div className="parent" >
                        {formElements} 
                 </div>
         }
