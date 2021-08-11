@@ -15,9 +15,14 @@ class FormElement extends React.Component{
 
               let  formElements = arrayOfKeys.map( e => <FormElementParmeters formSection = {e} dropDownClassname={e+","+this.props.formObject.id} key= {e+this.props.formObject.id} objectId={this.props.formObject.id} />)
                
+              // h5 tags are to line up elements on page, do not remove
                return <td className="parent" >
-                       <div className="testThree"> {this.props.formObject.id +1}</div>
-                       {formElements} 
+                       <div className="testThreeA"> <h5> </h5> {this.props.formObject.id +1}</div>
+                       {formElements}
+                       <div className="testThree ">
+                                <h5> </h5>
+                             <input className="testThree" type="number" min="1" />
+                        </div> 
                 </td>
         }
 }

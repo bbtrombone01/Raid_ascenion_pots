@@ -53,10 +53,18 @@
   .testThree{
     width: 25%;
     text-align: center;
+    justify-content: center;
   }
   .testEA{
     width: 20%;
     text-align: center;
+  }
+  .testThreeA{
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+    top: 50%;
+    position: relative;
   }
 
   /* .test{

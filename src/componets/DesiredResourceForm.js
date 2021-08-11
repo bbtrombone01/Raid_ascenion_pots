@@ -33,7 +33,8 @@ class DesiredResourceForm extends React.Component{
                             <th className="test">Rarity</th>
                             <th className ="test">Affinity</th>
                             <th className ="test">Start Ascension</th>
-                            <th className ="testEA"> End Ascension</th>
+                            <th className ="test"> End Ascension</th>
+                            <th className= "testEA"> Quanity</th>
                         </tr>
                     <tr className = "grandparent">
                         {mapOverArrayOfObjects}
