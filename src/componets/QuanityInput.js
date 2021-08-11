@@ -4,19 +4,16 @@ import {connect} from "react-redux"
 class QuanityInput extends React.Component{
 
 
-    test1 =(event )=>{
-       console.log(this)
-    //    debugger
-       console.log(event.target.value)
+    changeQuanitiy =(event )=>{
        let newQuainity =  event.target.value
        this.props.edit( this.props.objectId ,newQuainity)
     }
 
     render(){
-
+// keep h5 tag for lining things up on the page do not remove
         return <div className="testThree ">
                 <h5> </h5>
-                <input onChange={(event) =>this.test1(event)} className="testThree" type="number" min="1" value={this.props.arrayOfObjects[this.props.objectId].quanity} />
+                <input onChange={(event) =>this.changeQuanitiy(event)} className="testThree" type="number" min="1" value={this.props.arrayOfObjects[this.props.objectId].quanity} />
             </div> 
     }
 
@@ -29,7 +26,6 @@ const mapDispatchToProps =(dispatch) =>{
 }
 
 const mapStateToProps = (state) =>{
-    // debugger
     return{
         arrayOfObjects: state.desiredResouceReducer.desiredFormData
     }
