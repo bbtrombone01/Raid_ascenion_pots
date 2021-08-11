@@ -4,7 +4,8 @@ const initialState = {
         "Affinity": null, 
         startAscension: null, 
         endAscension: null, 
-        id: 0
+        id: 0, 
+        quanity: 1
     }]
 }
 
@@ -28,6 +29,20 @@ const desiredResouceReducer =(state = initialState, action)=>{
                 })
             
             }
+        
+        case "CHANGEQUANITY":
+                // debugger 
+            return{
+                ...state,
+                desiredFormData: state.desiredFormData.map( (e) =>{
+                    if(e.id == action.objectId){
+                        e.quanity = parseInt(action.newQuainity)
+                        return e
+                    }
+                    return e
+                })
+            }
+
     default: 
         return state
 

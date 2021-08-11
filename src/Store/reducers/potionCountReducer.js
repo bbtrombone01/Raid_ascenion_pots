@@ -20,10 +20,11 @@ const potionCountReducer =( state = initialState, action)=>{
     switch(action.type){
 
         case "INCREMENTPOTION":
+            // debugger
             return {
                 ...state,
-               [action.key1]: state[action.key1] + action.value1,
-               [action.key2]: state[action.key2] + action.value2,   
+               [action.key1]: state[action.key1] + action.value1 * action.quanity,
+               [action.key2]: state[action.key2] + action.value2 * action.quanity,   
             }
 
         case "BlankSTATE": {

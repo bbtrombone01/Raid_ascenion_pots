@@ -15,6 +15,7 @@ class DesiredResourceForm extends React.Component{
            startAscension: null, 
            endAscension: null,
            id: this.props.arrayOfObjects.length,
+           quanity: 1
         }
         this.props.addObject(payload)
     }

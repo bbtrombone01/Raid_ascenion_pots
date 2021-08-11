@@ -43,8 +43,8 @@ class PotionReducerSorter extends React.Component{
             let key2 = Object.keys(potionsObject[poitonRareityAndLevel][object["Affinity"]])[0]
             
             let value2 = Object.values(potionsObject[poitonRareityAndLevel][object["Affinity"]])[0]
-
-            this.props.add(key1,value1,key2,value2)
+            // debugger
+            this.props.add(key1,value1,key2,value2, object.quanity)
         }
     }
 
@@ -58,7 +58,7 @@ class PotionReducerSorter extends React.Component{
 const mapDispatchToProps =(dispatch) =>{
     return {
         blank: () => dispatch({type: "BlankSTATE"}),
-        add: (key1,value1, key2,value2) => dispatch({type: "INCREMENTPOTION",key1,value1,key2,value2})
+        add: (key1,value1, key2,value2, quanity) => dispatch({type: "INCREMENTPOTION",key1,value1,key2,value2, quanity})
     }
 }
 
