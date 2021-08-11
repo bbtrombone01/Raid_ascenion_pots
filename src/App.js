@@ -6,7 +6,7 @@ import "./form.css"
 
 function App(){
 
-  return <div className="parent">
+  return <div className="testFour">
     <DesiredResourceForm/>
     <PotionReducerSorter />
     <PoitonMap />

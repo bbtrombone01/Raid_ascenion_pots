@@ -10,11 +10,11 @@ class DesiredResourceForm extends React.Component{
  // each object in the desriedResourceReducer has the same id as it's index in the array 
  addObjectToArray=()=>{
        let payload = {
-            Rareity: null, 
-            Affinity: null, 
-            startAscension: null, 
-            endAscension: null, 
-            id: this.props.arrayOfObjects.length
+           Rareity: null, 
+           Affinity: null, 
+           startAscension: null, 
+           endAscension: null,
+           id: this.props.arrayOfObjects.length,
         }
         this.props.addObject(payload)
     }
@@ -24,9 +24,22 @@ class DesiredResourceForm extends React.Component{
         //maps over each object in the desiredFormData array from the desiredResouceReducer creates a form for the user input data,
             let mapOverArrayOfObjects = this.props.arrayOfObjects.map( e => <FormElement key ={e.id+"form"} formObject ={e}  />)
             return <div>
-                {mapOverArrayOfObjects}
-                <br/>
-                <br/>
+                {/* <br/>
+                <br/> */}
+                <table className =" testTwo">
+                    <tbody>
+                        <tr className= "parent"> 
+                            <th className="test"> Line</th>
+                            <th className="test">Rarity</th>
+                            <th className ="test">Affinity</th>
+                            <th className ="test">Start Ascension</th>
+                            <th className ="testEA"> End Ascension</th>
+                        </tr>
+                    <tr className = "grandparent">
+                        {mapOverArrayOfObjects}
+                    </tr>
+                    </tbody>
+                </table>
                 <button onClick={this.addObjectToArray}> add another champion </button>
             </div>
         }

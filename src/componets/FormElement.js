@@ -5,10 +5,9 @@ class FormElement extends React.Component{
 
 
         // change css names at some point 
-
-
+        
         render(){
-              // generates an array from the keys in formObject  
+                // generates an array from the keys in formObject  
               let  arrayOfKeys = Object.keys(this.props.formObject)
 
               // removes the string "id" from the array 
@@ -16,9 +15,10 @@ class FormElement extends React.Component{
 
               let  formElements = arrayOfKeys.map( e => <FormElementParmeters formSection = {e} dropDownClassname={e+","+this.props.formObject.id} key= {e+this.props.formObject.id} objectId={this.props.formObject.id} />)
                
-               return <div className="parent" >
+               return <td className="parent" >
+                       <div className="testThree"> {this.props.formObject.id +1}</div>
                        {formElements} 
-                </div>
+                </td>
         }
 }
 
