@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Raid_ascenion_pots/static/css/main.6a9adde7.chunk.css",
-    "main.js": "/Raid_ascenion_pots/static/js/main.d4c80f77.chunk.js",
-    "main.js.map": "/Raid_ascenion_pots/static/js/main.d4c80f77.chunk.js.map",
+    "main.css": "/Raid_ascenion_pots/static/css/main.83979b28.chunk.css",
+    "main.js": "/Raid_ascenion_pots/static/js/main.356c0f2c.chunk.js",
+    "main.js.map": "/Raid_ascenion_pots/static/js/main.356c0f2c.chunk.js.map",
     "runtime-main.js": "/Raid_ascenion_pots/static/js/runtime-main.8c571176.js",
     "runtime-main.js.map": "/Raid_ascenion_pots/static/js/runtime-main.8c571176.js.map",
     "static/js/2.4fb49743.chunk.js": "/Raid_ascenion_pots/static/js/2.4fb49743.chunk.js",
     "static/js/2.4fb49743.chunk.js.map": "/Raid_ascenion_pots/static/js/2.4fb49743.chunk.js.map",
     "index.html": "/Raid_ascenion_pots/index.html",
-    "static/css/main.6a9adde7.chunk.css.map": "/Raid_ascenion_pots/static/css/main.6a9adde7.chunk.css.map",
+    "static/css/main.83979b28.chunk.css.map": "/Raid_ascenion_pots/static/css/main.83979b28.chunk.css.map",
     "static/js/2.4fb49743.chunk.js.LICENSE.txt": "/Raid_ascenion_pots/static/js/2.4fb49743.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8c571176.js",
     "static/js/2.4fb49743.chunk.js",
-    "static/css/main.6a9adde7.chunk.css",
-    "static/js/main.d4c80f77.chunk.js"
+    "static/css/main.83979b28.chunk.css",
+    "static/js/main.356c0f2c.chunk.js"
   ]
 }
