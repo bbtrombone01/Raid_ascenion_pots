@@ -2,6 +2,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import PotionDisplay from "./PotionDisplay"
+import ConvertPotion from "./ConvertPotionsToEnergy"
 
 
 class PoitonMap extends React.Component{
@@ -12,8 +13,9 @@ class PoitonMap extends React.Component{
          
         arrayOfPoitions = arrayOfPoitions.map( e => <PotionDisplay key={e} potion ={e} />)
 
-        return <div>
+        return <div class ="floatRightTest">
             {arrayOfPoitions}
+            <ConvertPotion />
         </div>
     }
 }

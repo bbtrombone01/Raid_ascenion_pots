@@ -7,12 +7,14 @@ import "./form.css"
 
 function App(){
 
-  return <div className="testFour">
+  return <div>
     <ParagrahBlurb />
+    <div className="testFour">
+      
     <DesiredResourceForm/>
-    <PotionReducerSorter />
     <PoitonMap />
-
+    </div>
+    <PotionReducerSorter />
   </div> 
   
 }
