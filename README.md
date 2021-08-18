@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello, i play the game Raid shadow Legends, I wanted to make an app that made figuring out what potions people wanted easier. the app should have a form for users to fill out and once that is completed a list of poitions should be generated. next features should be figuring out how much energy you need to get all of the potions on the list. 
 
 ## Available Scripts
 
