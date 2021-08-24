@@ -117,7 +117,7 @@ class ConvertPotion extends React.Component{
             for(i; array[1] > 0 ;i++){
 
                 array[2] = array[2] - superiorPotions
-                array[1] = array [1] - greaterPotions
+                array[1] = array[1] - greaterPotions
             }
 
         }else {
@@ -125,7 +125,7 @@ class ConvertPotion extends React.Component{
             for(i; array[2] > 0 ; i++){
     
                  array[2] = array[2] - superiorPotions
-                 array[1] = array [1] - greaterPotions
+                 array[1] = array[1] - greaterPotions
     
             } 
 

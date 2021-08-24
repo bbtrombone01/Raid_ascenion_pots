@@ -3,17 +3,17 @@ import React from "react"
 import { connect } from "react-redux"
 import PotionDisplay from "./PotionDisplay"
 import ConvertPotion from "./ConvertPotionsToEnergy"
-
+import ErrorHandling from "./ErrorHandling"
 
 class PoitonMap extends React.Component{
 
     render(){
-        /// figure out a better key 
         let arrayOfPoitions = Object.keys(this.props.potionState)
          
         arrayOfPoitions = arrayOfPoitions.map( e => <PotionDisplay key={e} potion ={e} />)
 
         return <div class ="floatRightTest">
+            <ErrorHandling />
             {arrayOfPoitions}
             <ConvertPotion />
         </div>

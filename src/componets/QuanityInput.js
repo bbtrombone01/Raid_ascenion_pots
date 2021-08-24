@@ -10,9 +10,7 @@ class QuanityInput extends React.Component{
     }
 
     render(){
-// keep h5 tag for lining things up on the page do not remove
         return <div className="testThree ">
-                <h5> </h5>
                 <input onChange={(event) =>this.changeQuanitiy(event)} className="testThree" type="number" min="1" value={this.props.arrayOfObjects[this.props.objectId].quanity} />
             </div> 
     }
@@ -26,7 +24,7 @@ const mapDispatchToProps =(dispatch) =>{
 }
 
 const mapStateToProps = (state) =>{
-    return{
+    return {
         arrayOfObjects: state.desiredResouceReducer.desiredFormData
     }
 }

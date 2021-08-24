@@ -46,8 +46,6 @@ class FormElementParmeters extends React.Component{
         let headerString = null
         // get an id based of the className prop
 
-  
-
         let formElementId = parseInt(this.props.dropDownClassname.split(",")[1])
         
         // uses an id and the form section prop to get a string that can be filled in as the header vaule 

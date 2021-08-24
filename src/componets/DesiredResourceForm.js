@@ -25,8 +25,6 @@ class DesiredResourceForm extends React.Component{
         //maps over each object in the desiredFormData array from the desiredResouceReducer creates a form for the user input data,
             let mapOverArrayOfObjects = this.props.arrayOfObjects.map( e => <FormElement key ={e.id+"form"} formObject ={e}  />)
             return <div className="floatLeftTest">
-                {/* <br/>
-                <br/> */}
                 <table className ="testTwo">
                     <tbody>
                         <tr className= "parent"> 
@@ -49,7 +47,7 @@ class DesiredResourceForm extends React.Component{
 
 const mapStateToProps = (state) =>{
 
-    return{
+    return {
         arrayOfObjects: state.desiredResouceReducer.desiredFormData
     }
 }

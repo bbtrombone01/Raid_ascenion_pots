@@ -20,7 +20,7 @@ class FormElement extends React.Component{
                
               // h5 tags are to line up elements on page, do not remove
                return <td className="parent" >
-                       <div className="testThreeA"> <h5> </h5> {this.props.formObject.id +1}</div>
+                       <div className="testThreeA"> {this.props.formObject.id +1}</div>
                        {formElements}
                        <QuanityInput objectId={this.props.formObject.id}/>
                 </td>

@@ -27,7 +27,7 @@ const potionCountReducer =( state = initialState, action)=>{
                [action.key2]: state[action.key2] + action.value2 * action.quanity,   
             }
 
-        case "BlankSTATE": {
+        case "BLANKSTATE": {
            
             return {
             ...initialState
