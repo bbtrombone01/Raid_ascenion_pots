@@ -16,9 +16,10 @@ class PotionReducerSorter extends React.Component{
     
     checkObject =(object)=>{
 
-        if(Object.values(object).includes(null) != true && object["startAscension"] <  object["endAscension"] ){
+        // debugger
+        if(Object.values(object).includes(null)  !== true && object["startAscension"] <  object["endAscension"] ){
             return this.addToStore(object)
-        }else if (Object.values(object).includes(null) != true && object["startAscension"] >= object["endAscension"]){
+        }else if (Object.values(object).includes(null) !== true && object["startAscension"] >= object["endAscension"]){
             
             // adds the line number of the object to an array of all objects with starting ascesnion >= ending ascension 
             this.props.error(String([object.id +1]))

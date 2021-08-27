@@ -4,15 +4,13 @@ import DropDownMenu from "./DropDownMenu"
 import {connect} from "react-redux"
 
 class FormElementParmeters extends React.Component{
-
-    // changes css rules 
     
     state = {
         showDropDownMenu: false,
     }
     
     changeDropDownMenuState =(event)=>{
-        if(this.state.showDropDownMenu == true){
+        if(this.state.showDropDownMenu === true){
             this.setState({showDropDownMenu: false})
         }else{
             this.setState({showDropDownMenu: true})
@@ -50,8 +48,6 @@ class FormElementParmeters extends React.Component{
         
         // uses an id and the form section prop to get a string that can be filled in as the header vaule 
         headerString = this.props.arrayOfObjects[formElementId][this.props.formSection]
-        
-        // debugger
         
         let dropDownMenu =  dropDownMenuInfo[this.props.formSection].map( e=> <DropDownMenu buttonInnerText = {e} eventHandler={this.changeDropDownMenuState} key={e+this.props.objectId}/>)
 

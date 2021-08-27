@@ -21,7 +21,7 @@ const desiredResouceReducer =(state = initialState, action)=>{
             return {
                 ...state,
                  desiredFormData: state.desiredFormData.map( (e) =>{
-                    if(e.id == parseInt(action.payload.index)){
+                    if(e.id === parseInt(action.payload.index)){
                         e[action.payload.key] = action.payload.value
                         return e
                     }
@@ -31,16 +31,23 @@ const desiredResouceReducer =(state = initialState, action)=>{
             }
         
         case "CHANGEQUANITY":
-                // debugger 
+        
             return{
                 ...state,
                 desiredFormData: state.desiredFormData.map( (e) =>{
-                    if(e.id == action.objectId){
+                    if(e.id === action.objectId){
                         e.quanity = parseInt(action.newQuainity)
                         return e
                     }
                     return e
                 })
+            }
+
+        case "DELETE":
+            // debugger
+            return{
+                ...state,
+                desiredFormData: action.payload
             }
 
     default: 

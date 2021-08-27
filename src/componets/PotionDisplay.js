@@ -9,7 +9,7 @@ class PotionDisplay extends React.Component{
 
         let potionString = null
         // checks each part of the potionCountReducer store and see if value not zero 
-                if( this.props.potionCountReducer[this.props.potion] != 0){
+                if( this.props.potionCountReducer[this.props.potion] !== 0){
                     // potionString is an int from the potiionCountReducer 
 
                     potionString = this.props.potionCountReducer[this.props.potion]

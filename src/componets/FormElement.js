@@ -4,12 +4,9 @@ import QuanityInput from "./QuanityInput"
 
 
 class FormElement extends React.Component{
-
-
-        // change css names at some point 
         
         render(){
-                // generates an array from the keys in formObject  
+              // generates an array from the keys in formObject  
               let  arrayOfKeys = Object.keys(this.props.formObject)
 
               // removes the string "id" and "qunaity" from the array 
@@ -18,7 +15,6 @@ class FormElement extends React.Component{
 
               let  formElements = arrayOfKeys.map( e => <FormElementParmeters formSection = {e} dropDownClassname={e+","+this.props.formObject.id} key= {e+this.props.formObject.id} objectId={this.props.formObject.id} />)
                
-              // h5 tags are to line up elements on page, do not remove
                return <td className="parent" >
                        <div className="testThreeA"> {this.props.formObject.id +1}</div>
                        {formElements}

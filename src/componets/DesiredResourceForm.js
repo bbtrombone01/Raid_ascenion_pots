@@ -1,7 +1,7 @@
 import React from "react"
 import FormElement from "./FormElement"
 import {connect} from "react-redux"
-
+import DeleteLine from "./DeleteLine"
 
 class DesiredResourceForm extends React.Component{
 
@@ -21,7 +21,7 @@ class DesiredResourceForm extends React.Component{
     }
 
     render(){
-        
+
         //maps over each object in the desiredFormData array from the desiredResouceReducer creates a form for the user input data,
             let mapOverArrayOfObjects = this.props.arrayOfObjects.map( e => <FormElement key ={e.id+"form"} formObject ={e}  />)
             return <div className="floatLeftTest">
@@ -40,7 +40,8 @@ class DesiredResourceForm extends React.Component{
                     </tr>
                     </tbody>
                 </table>
-                <button onClick={this.addObjectToArray}> add another champion </button>
+                <button onClick={this.addObjectToArray}> add line </button>
+                <DeleteLine />
             </div>
         }
 }

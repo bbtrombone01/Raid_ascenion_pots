@@ -12,7 +12,7 @@ class PoitonMap extends React.Component{
          
         arrayOfPoitions = arrayOfPoitions.map( e => <PotionDisplay key={e} potion ={e} />)
 
-        return <div class ="floatRightTest">
+        return <div className ="floatRightTest">
             <ErrorHandling />
             {arrayOfPoitions}
             <ConvertPotion />
