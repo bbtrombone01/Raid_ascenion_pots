@@ -15,7 +15,7 @@ class PoitonMap extends React.Component{
         return <div className ="floatRightTest">
             <ErrorHandling />
             {arrayOfPoitions}
-            <ConvertPotion />
+            {/* <ConvertPotion /> */}
         </div>
     }
 }

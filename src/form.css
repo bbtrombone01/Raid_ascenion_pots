@@ -3,39 +3,31 @@
   flex-direction: row;
 }
 
-  .parent{
+  .tableInfo{
     display: flex;
     flex-direction: row;
     justify-content: left;
-    border: solid;
+    padding-bottom: 15px;
   }
 
-  .grandParent{
-    float: left;
-  } 
-
-
-
-  .test{
-    border-right: solid;
+  .tableHead{
     width: 20%;
     text-align: center;
   }
 
-  .testTwo{
+  .userInputTable{
     width: 90%;
+    border:solid;
+    border-color: aqua;
   }
 
-  .testThree{
+  .StateData{
     width: 25%;
     text-align: center;
     justify-content: center;
   }
-  .testEA{
-    width: 20%;
-    text-align: center;
-  }
-  .testThreeA{
+
+  .userInputTableRow{
     width: 25%;
     text-align: center;
     justify-content: center;
@@ -43,27 +35,9 @@
     position: relative;
   }
 
-  .floatLeftTest{
-   /* background-color: aqua; */
+  .userInputParnetContainer{
    width: 60%;
   }
-
-
-  .floatRightTest{
-    /* float: left; */
-  }
-
-  /* .test{
-    display: flex;
-    float: right;
-    flex-direction: row;
-    color: aqua;
-    justify-content: right;
-  } */
-
-  /* .grandparent{
-      display: inline-flex   
-  } */
 
   .test4a{
     display: inline;

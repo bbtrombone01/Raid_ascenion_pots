@@ -2,10 +2,10 @@ const initialState = {
     desiredFormData: [{
         "Rareity": null, 
         "Affinity": null, 
-        startAscension: null, 
-        endAscension: null, 
-        id: 0, 
-        quanity: 1
+        startAscension: 0, 
+        endAscension: 1, 
+        id: 1, 
+        quanity: 0
     }]
 }
 
@@ -18,10 +18,12 @@ const desiredResouceReducer =(state = initialState, action)=>{
             }
     
         case "EDIT":
+
             return {
                 ...state,
                  desiredFormData: state.desiredFormData.map( (e) =>{
-                    if(e.id === parseInt(action.payload.index)){
+                    if(e.id === action.payload.id){
+                        console.log("hello")
                         e[action.payload.key] = action.payload.value
                         return e
                     }
@@ -44,11 +46,24 @@ const desiredResouceReducer =(state = initialState, action)=>{
             }
 
         case "DELETE":
-            // debugger
             return{
                 ...state,
                 desiredFormData: action.payload
             }
+        case "TESTQUALITY":
+
+            return {
+                ...state,
+                desiredFormData: state.desiredFormData.map((e) =>{ 
+                    if( e.id === action.payload.id){
+                        e[action.payload.field] = parseInt(action.payload.value)
+
+                        return e
+                    }
+                        return e
+                })
+            }
+        
 
     default: 
         return state

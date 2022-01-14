@@ -1,23 +1,28 @@
 import React from "react"
 import {connect} from "react-redux"
 import {poitons} from "../pots_value"
+import PoitonMap from "./PoitonMap"
 
 class PotionReducerSorter extends React.Component{
     
     iterateOverDesiredFormData=()=>{
+
         // sets store to 0 of everything, if you just add without emptying the store, it generates to many potions
         this.props.blank()
         this.props.default()
 
         for(let i = 0; i < this.props.desiredFormData.length; i++){
             this.checkObject(this.props.desiredFormData[i])
+
+            console.log(this.props.desiredFormData[i])
+            console.log( " this is iterateOver data function ")
         }
     }
     
     checkObject =(object)=>{
 
-        // debugger
-        if(Object.values(object).includes(null)  !== true && object["startAscension"] <  object["endAscension"] ){
+        if(Object.values(object).includes(null)  !== true && object["startAscension"] <  object["endAscension"] && object["quanity"] !== 0 ){
+            console.log(object)
             return this.addToStore(object)
         }else if (Object.values(object).includes(null) !== true && object["startAscension"] >= object["endAscension"]){
             
@@ -28,6 +33,8 @@ class PotionReducerSorter extends React.Component{
 
     addToStore =(object)=>{
 
+        // debugger
+
         let potionsObject = poitons
 
         let startLevel = object["startAscension"]
@@ -36,6 +43,7 @@ class PotionReducerSorter extends React.Component{
         for(let i = startLevel; i <= object["endAscension"]; i++){
             
             let poitonRareityAndLevel = object["Rareity"]+i
+             console.log(poitonRareityAndLevel)
 
             /// creates two key value paris, to be feed into the potions store, ex. key1 = "Grater Arcane" value1= 0
 
@@ -48,12 +56,23 @@ class PotionReducerSorter extends React.Component{
             let value2 = Object.values(potionsObject[poitonRareityAndLevel][object["Affinity"]])[0]
             
             this.props.add(key1,value1,key2,value2, object.quanity)
+
+            console.log(key1, "this is key1")
+            console.log(key2, "this is key2 ")
+            console.log( value1, "this is value 1")
+            console.log( value2, "this is value 2")
+
+            // debugger
         }
+
+        
     }
 
   render(){
       this.iterateOverDesiredFormData()
-      return null 
+      return (
+          <PoitonMap />
+      )
   }
 
 }
