@@ -14,15 +14,12 @@ class PotionReducerSorter extends React.Component{
         for(let i = 0; i < this.props.desiredFormData.length; i++){
             this.checkObject(this.props.desiredFormData[i])
 
-            console.log(this.props.desiredFormData[i])
-            console.log( " this is iterateOver data function ")
         }
     }
     
     checkObject =(object)=>{
 
         if(Object.values(object).includes(null)  !== true && object["startAscension"] <  object["endAscension"] && object["quanity"] !== 0 ){
-            console.log(object)
             return this.addToStore(object)
         }else if (Object.values(object).includes(null) !== true && object["startAscension"] >= object["endAscension"]){
             
@@ -43,7 +40,6 @@ class PotionReducerSorter extends React.Component{
         for(let i = startLevel; i <= object["endAscension"]; i++){
             
             let poitonRareityAndLevel = object["Rareity"]+i
-             console.log(poitonRareityAndLevel)
 
             /// creates two key value paris, to be feed into the potions store, ex. key1 = "Grater Arcane" value1= 0
 
@@ -56,11 +52,6 @@ class PotionReducerSorter extends React.Component{
             let value2 = Object.values(potionsObject[poitonRareityAndLevel][object["Affinity"]])[0]
             
             this.props.add(key1,value1,key2,value2, object.quanity)
-
-            console.log(key1, "this is key1")
-            console.log(key2, "this is key2 ")
-            console.log( value1, "this is value 1")
-            console.log( value2, "this is value 2")
 
             // debugger
         }

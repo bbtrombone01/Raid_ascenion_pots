@@ -11,18 +11,23 @@
   }
 
   .tableHead{
-    width: 20%;
+    width: 17%;
     text-align: center;
+  }
+
+  .buttonTest{
+    position: relative;
+    left: 3%;
   }
 
   .userInputTable{
     width: 90%;
     border:solid;
-    border-color: aqua;
+    border-color: black;
   }
 
   .StateData{
-    width: 25%;
+    width: 21%;
     text-align: center;
     justify-content: center;
   }

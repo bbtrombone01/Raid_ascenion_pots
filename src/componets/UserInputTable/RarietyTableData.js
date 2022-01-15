@@ -40,7 +40,7 @@ function RarietyTableData(props){
 
 
     return(
-        <select onChange={changeRarity} className="StateData">
+        <select value={props.defaultSelect} onChange={changeRarity} className="StateData">
             <option>choose </option>
             <option>Uncommon</option>
             <option>Rare</option>

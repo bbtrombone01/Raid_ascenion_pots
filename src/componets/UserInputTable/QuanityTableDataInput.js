@@ -1,8 +1,10 @@
 import {React, useState, useEffect, useRef} from "react";
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 
 
 function QuanityTableDataInput(props){
+
+    const  displayValue = useSelector((state) => state.desiredResouceReducer.desiredFormData[props.id-1])
 
     let [currentCount, setCount] = useState(props.min)
 
@@ -38,7 +40,7 @@ function QuanityTableDataInput(props){
     }, [currentCount]);
 
     return(
-        <input className="StateData" onChange={updateCurrentCount} type="number" value={currentCount} min={props.min} max={props.max} />
+        <input className="StateData"  onChange={updateCurrentCount} value={displayValue[props.field]} type="number"  min={props.min} max={props.max} />
     )
 }
 

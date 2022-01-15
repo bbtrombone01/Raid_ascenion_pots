@@ -56,7 +56,6 @@ class ConvertPotion extends React.Component{
 
         return this.level20Dugeons(array)
 
-
     }
 
 

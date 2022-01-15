@@ -1,7 +1,7 @@
 const initialState = {
     desiredFormData: [{
-        "Rareity": null, 
-        "Affinity": null, 
+        "Rareity": "choose", 
+        "Affinity": "choose", 
         startAscension: 0, 
         endAscension: 1, 
         id: 1, 
@@ -23,7 +23,7 @@ const desiredResouceReducer =(state = initialState, action)=>{
                 ...state,
                  desiredFormData: state.desiredFormData.map( (e) =>{
                     if(e.id === action.payload.id){
-                        console.log("hello")
+
                         e[action.payload.key] = action.payload.value
                         return e
                     }

@@ -6,11 +6,13 @@ function AffinityTableData(props){
 
     let [ currentAffinity, setAffinity] = useState(null)
 
+
     const dispatch = useDispatch()
 
     const isInitialMount = useRef(true);
 
     const changeAffinity =(event )=>{
+
 
         setAffinity(event.target.value)
     }
@@ -26,6 +28,8 @@ function AffinityTableData(props){
         })
     }
 
+    
+
     // will only dispatch after the componet has mounted 
     useEffect(() => {
         if (isInitialMount.current) {
@@ -36,9 +40,12 @@ function AffinityTableData(props){
       // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [currentAffinity]);
 
+
+
+    //   debugger
     return(
-        <select onChange={changeAffinity} className="StateData">
-            <option>choose </option>
+        <select value={props.defaultSelect} onChange={changeAffinity} className="StateData">
+            <option >{props.defaultSelect} </option>
             <option>Spirit</option>
             <option>Force</option>
             <option>Magic</option>

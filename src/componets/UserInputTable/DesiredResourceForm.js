@@ -1,7 +1,6 @@
 import React from "react"
 import FormElement from "./FormElement"
 import {useSelector, useDispatch} from "react-redux"
-import DeleteLine from "../DeleteLine"
 
 function DesiredResourceForm (){
 
@@ -18,8 +17,8 @@ function DesiredResourceForm (){
         dispatch({
             type: "ADDOBJECT",
             payload: {
-                Rareity: null, 
-                Affinity: null, 
+                Rareity: "choose", 
+                Affinity: "choose", 
                 startAscension: 0, 
                 endAscension: 1,
                 id: desiredFormDataState.length + 1,
@@ -41,14 +40,14 @@ function DesiredResourceForm (){
                             <th className ="tableHead">Start Ascension</th>
                             <th className ="tableHead"> End Ascension</th>
                             <th className= "tableHead"> Quanity</th>
+                            <th className="tableHead"> </th>
                         </tr>
                         <tr className>
                             {mapOverArrayOfObjects}
                         </tr>
                     </tbody>
+                <button className="buttonTest" onClick={addObjectToArray} > add line </button>
                 </table>
-                <button onClick={addObjectToArray} > add line </button>
-                <DeleteLine />
             </div>) 
 }
 
