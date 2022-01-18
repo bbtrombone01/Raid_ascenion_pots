@@ -1,1 +1,7 @@
-Hello, i play the game Raid shadow Legends, I wanted to make an app that made figuring out what potions people wanted easier. the app should have a form for users to fill out and once that is completed a list of poitions should be generated. next features should be figuring out how much energy you need to get all of the potions on the list.
+**Raid shadow legends ascension calculator**
+
+Raid shadow legends ascension calculator is a React based application. Based off user input this calculator will display the needed in game resource to fullfill players needs.
+
+
+**live version**
+https://bbtrombone01.github.io/Raid_ascenion_pots/ is currently hosting  a live version of the project.
