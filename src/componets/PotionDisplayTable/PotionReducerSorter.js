@@ -1,7 +1,7 @@
 import React from "react"
 import {connect} from "react-redux"
 import {poitons} from "../../pots_value"
-import  TestPoitonTable from "./TestPoitonTable"
+import  TestPoitonTable from "./DisplayPotionTable"
 
 class PotionReducerSorter extends React.Component{
 
@@ -22,10 +22,9 @@ class PotionReducerSorter extends React.Component{
 
         if(Object.values(object).includes('choose')  !== true && object["startAscension"] <  object["endAscension"] && object["quanity"] !== 0 ){
             return this.addToStore(object)
-        }else if (Object.values(object).includes(null) !== true && object["startAscension"] >= object["endAscension"]){
-            
+        }else if (Object.values(object).includes('choose') !== true && object["startAscension"] >= object["endAscension"]){
             // adds the line number of the object to an array of all objects with starting ascesnion >= ending ascension 
-            this.props.error(String([object.id +1]))
+            this.props.error(String([object.id]))
         }
     }
 
@@ -35,6 +34,7 @@ class PotionReducerSorter extends React.Component{
         let potionsObject = poitons
 
         let startLevel = object["startAscension"]
+        
         startLevel = parseInt(startLevel) +1
 
         for(let i = startLevel; i <= object["endAscension"]; i++){
@@ -52,8 +52,6 @@ class PotionReducerSorter extends React.Component{
             let value2 = Object.values(potionsObject[poitonRareityAndLevel][object["Affinity"]])[0]
             
             this.props.add(key1,value1,key2,value2, object.quanity)
-
-            // debugger
         }
 
         

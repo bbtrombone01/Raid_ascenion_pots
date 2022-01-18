@@ -8,7 +8,7 @@ const errorHandlingReducer = (state =intialState, action) =>{
     switch(action.type){
 
         case "ADDTOARRAY":
-            // debugger
+            
         return  {
             ...state,
             arrayOfAscnsionErrors: state.arrayOfAscnsionErrors.concat(action.int)

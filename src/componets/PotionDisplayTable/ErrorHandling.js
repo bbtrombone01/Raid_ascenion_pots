@@ -1,42 +1,40 @@
 import React from "react"
-import {connect} from "react-redux"
+import {useSelector} from "react-redux"
 
+function ErrorHandling(){
 
-class ErrorHandling extends React.Component {
+    const arrayOfIds = useSelector((state) => state["errorHandlingReducer"]["arrayOfAscnsionErrors"])
 
     
-    //creates a string of all the line errors 
-    
-    generateErrorString =()=>{
-        let errorLines = ""
+     const generateErrorMessage =(arrayOfIds)=>{
 
-        for(let i = 0; i < this.props.userErrors.length; i++){
+        let errorMessage = ""
 
-            if( i === this.props.userErrors.length - 1){
-                errorLines = errorLines + " and " + this.props.userErrors[i]
-            }else{
-                errorLines = errorLines + this.props.userErrors[i] +  ", "
+        let stringOfErrors = ""
+
+        if(arrayOfIds.length === 1){
+            errorMessage= "Line " + arrayOfIds[0] + " has an error"
+            return errorMessage
+        }else if( arrayOfIds.length === 2){
+            errorMessage = "Line " + arrayOfIds[0] + " and " + arrayOfIds[1] + " have errors"
+        }else
+            for(let i = 0; i < arrayOfIds.length; i++){
+                if(i ===arrayOfIds.length-1){
+                    return  errorMessage = "Line" + stringOfErrors + " and " +arrayOfIds[i] + " have errors"
+                }
+                    stringOfErrors = stringOfErrors + " " + arrayOfIds[i] + ","   
+            } 
+            if(stringOfErrors !== ""){
+                errorMessage = "There are errors on line" + stringOfErrors + " have inaccuaries"
             }
-        }
-            return errorLines
+            return errorMessage
     }
 
-    render(){
-            let message = null
-
-            if(this.generateErrorString() !== ""){
-
-                message = "error: line"+ this.generateErrorString()+" has a has a start ascension that is equal to or greater than end ascension"
-            }
-        return <p> {message} </p>
-    }
+    return <div>
+       {generateErrorMessage(arrayOfIds)} 
+    </div>
     
 }
 
-const mapStateToProps =(state)=>{
-    return {
-        userErrors: state.errorHandlingReducer.arrayOfAscnsionErrors
-    }
-}
 
-export default connect(mapStateToProps)(ErrorHandling)
+export default ErrorHandling
