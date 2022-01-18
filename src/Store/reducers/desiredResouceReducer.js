@@ -32,25 +32,12 @@ const desiredResouceReducer =(state = initialState, action)=>{
             
             }
         
-        case "CHANGEQUANITY":
-        
-            return{
-                ...state,
-                desiredFormData: state.desiredFormData.map( (e) =>{
-                    if(e.id === action.objectId){
-                        e.quanity = parseInt(action.newQuainity)
-                        return e
-                    }
-                    return e
-                })
-            }
-
         case "DELETE":
             return{
                 ...state,
                 desiredFormData: action.payload
             }
-        case "TESTQUALITY":
+        case "UPDATE":
 
             return {
                 ...state,

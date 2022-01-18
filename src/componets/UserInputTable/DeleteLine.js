@@ -11,20 +11,20 @@ function DeleteLine (props){
     
     function deleteLine(){
 
-        let testFilter = desiredFormDataState.filter((e) => e !== desiredFormDataState[props.id-1])
+        let filteredData = desiredFormDataState.filter((e) => e !== desiredFormDataState[props.id-1])
 
-        for(let i = 0 ;i < testFilter.length; i++){
+        for(let i = 0 ;i < filteredData.length; i++){
 
-            if(testFilter[i].id > props.id){
+            if(filteredData[i].id > props.id){
 
-                testFilter[i].id = testFilter[i].id -1
+                filteredData[i].id = filteredData[i].id -1
             }
 
         }
 
         dispatch({
             type: "DELETE",
-            payload:  testFilter
+            payload:  filteredData
         })
     }
 

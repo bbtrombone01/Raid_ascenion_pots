@@ -20,7 +20,7 @@ function QuanityTableDataInput(props){
 
     const dispatchCurrentCount =()=>{
         dispatch({
-            type: "TESTQUALITY",
+            type: "UPDATE",
             payload: {
                 field: props.field,
                 value: currentCount,

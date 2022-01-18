@@ -1,4 +1,4 @@
-.testFour{
+.flexbox{
   display: flex;
   flex-direction: row;
 }
@@ -16,9 +16,10 @@
     text-align: center;
   }
 
-  .buttonTest{
+  .button{
     position: relative;
     left: 3%;
+    text-align: center;
   }
 
   .userInputTable{
@@ -44,10 +45,6 @@
 
   .userInputParnetContainer{
    width: 60%;
-  }
-
-  .test4a{
-    display: inline;
   }
 
   .poitonOutputTable{

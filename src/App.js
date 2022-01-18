@@ -8,7 +8,7 @@ function App(){
 
   return <div>
     <ParagrahBlurb />
-    <div className="testFour">
+    <div className="flexbox">
     <DesiredResourceForm/>
     <PotionReducerSorter />
     </div>

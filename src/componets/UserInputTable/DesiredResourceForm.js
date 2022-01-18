@@ -46,7 +46,7 @@ function DesiredResourceForm (){
                             {mapOverArrayOfObjects}
                         </tr>
                     </tbody>
-                <button className="buttonTest" onClick={addObjectToArray} > add line </button>
+                <button className="button" onClick={addObjectToArray} > add line </button>
                 </table>
             </div>) 
 }
