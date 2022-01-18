@@ -1,10 +1,11 @@
 import React from "react"
 import {connect} from "react-redux"
-import {poitons} from "../pots_value"
-import PoitonMap from "./PoitonMap"
+import {poitons} from "../../pots_value"
+// import PoitonMap from "./PoitonMap"
 import  TestPoitonTable from "./TestPoitonTable"
 
 class PotionReducerSorter extends React.Component{
+
     
     iterateOverDesiredFormData=()=>{
 
