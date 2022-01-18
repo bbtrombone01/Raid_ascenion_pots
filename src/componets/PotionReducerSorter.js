@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {poitons} from "../pots_value"
 import PoitonMap from "./PoitonMap"
+import  TestPoitonTable from "./TestPoitonTable"
 
 class PotionReducerSorter extends React.Component{
     
@@ -19,7 +20,7 @@ class PotionReducerSorter extends React.Component{
     
     checkObject =(object)=>{
 
-        if(Object.values(object).includes(null)  !== true && object["startAscension"] <  object["endAscension"] && object["quanity"] !== 0 ){
+        if(Object.values(object).includes('choose')  !== true && object["startAscension"] <  object["endAscension"] && object["quanity"] !== 0 ){
             return this.addToStore(object)
         }else if (Object.values(object).includes(null) !== true && object["startAscension"] >= object["endAscension"]){
             
@@ -30,7 +31,6 @@ class PotionReducerSorter extends React.Component{
 
     addToStore =(object)=>{
 
-        // debugger
 
         let potionsObject = poitons
 
@@ -62,7 +62,7 @@ class PotionReducerSorter extends React.Component{
   render(){
       this.iterateOverDesiredFormData()
       return (
-          <PoitonMap />
+          <TestPoitonTable />
       )
   }
 

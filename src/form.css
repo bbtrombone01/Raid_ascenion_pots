@@ -8,10 +8,11 @@
     flex-direction: row;
     justify-content: left;
     padding-bottom: 15px;
+    padding-right: 2px;
   }
 
   .tableHead{
-    width: 17%;
+    width: 18%;
     text-align: center;
   }
 
@@ -24,6 +25,7 @@
     width: 90%;
     border:solid;
     border-color: black;
+    flex-grow: 1;
   }
 
   .StateData{
@@ -46,4 +48,19 @@
 
   .test4a{
     display: inline;
+  }
+
+  .poitonOutputTable{
+    border: solid;
+    align-items: flex-start;
+    height: max-content;
+  }
+
+  .userOutputTdTest{
+    /* border: solid; */
+    text-align: center;
+  }
+
+  .potionImage{
+    width: 33%;
   }
