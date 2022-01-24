@@ -3,6 +3,10 @@
   flex-direction: row;
 }
 
+.visableOnlyMobile{
+  display: none;
+}
+
   .tableInfo{
     display: flex;
     flex-direction: row;
@@ -59,4 +63,29 @@
 
   .potionImage{
     width: 33%;
+  }
+
+  @media (max-width: 900px) {
+    .flexbox{
+      display: inline;
+    }
+    .userInputParnetContainer{
+      padding-bottom: 10px;
+      width: 100%;
+    }
+
+    .userInputTable{
+      width: 100%;
+    }
+
+    .tableHead{
+      width: 20%;
+    }
+    .visableOnlyMobile{
+      display: inline;
+    }
+    .StateData{
+      width: 25%
+    }
+
   }
